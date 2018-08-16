@@ -7,13 +7,13 @@ int main()
     int x[n];
     for(i=1;i<=n;i++)
         cin>>x[i];
-    int p = 0, s = 0;
+    int max_so_far = 0, cur_max = 0;
     for (int k = 1; k <= n; k++)
     {
-        s = max(x[k],s+x[k]);
+        cur_max = max(x[k], cur_max+x[k]);
         cout<<s<<endl;
-        p = max(p,s);
+        max_so_far = max(max_so_far, cur_max);
     }
-    cout << p << "\n";
+    cout << max_so_far<< "\n";
     return 0;
 }
